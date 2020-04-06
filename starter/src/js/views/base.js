@@ -5,7 +5,10 @@ export const elements = {
     serachResultDiv: document.querySelector('.results'),
     serachResultPages: document.querySelector('.results__pages'),
     recipe: document.querySelector('.recipe'),
-    shoppingList: document.querySelector('.shopping__list')
+    shoppingList: document.querySelector('.shopping__list'),
+    recipeLikes: document.querySelector('.recipe__love'),
+    likesMenu: document.querySelector('.likes__field'),
+    likesList: document.querySelector('.likes__list')
 };
 
 export const elementStrings = {
