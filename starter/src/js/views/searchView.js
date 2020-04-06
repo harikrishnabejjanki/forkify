@@ -9,7 +9,16 @@ export const clearInput = () => {
 export const clearList = () => {
     elements.searchResultList.innerHTML = '';
     elements.serachResultPages.innerHTML = '';
-}; 
+};
+
+export const highlightedSelected = id => {
+    const resultArr = Array.from(document.querySelectorAll('.results__link'));
+
+    resultArr.map(el=>{
+        el.classList.remove('results__link--active');
+    })
+    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+}
 // 'Pasta with tomato and spinach'  // string.split ===>  ['Pasta','with','tomato','and','spinach'];
 
 /*
@@ -45,7 +54,7 @@ const limitRecipeTitle = (title, limit = 17) => {
 }
 
 
-const renderRecipe = recipe => { 
+const renderRecipe = recipe => {
     const markup = `
             <li>
             <a class="results__link" href="#${recipe.recipe_id}">
